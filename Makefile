@@ -130,7 +130,8 @@ include .depend
 install: dummy
 	$(OCAMLFIND) install $(PACKAGE) META \
 	$(LIB) $(LIB:.cmxa=.a) $(LIB:.cmxa=.cmi) $(LIB:.cmxa=.mli) $(LIB_BYTE) \
-	$(LIB_GTK) $(LIB_GTK:.cmx=.o) $(LIB_GTK:.cmx=.cmi) $(LIB_GTK:.cmx=.mli) $(LIB_GTK_BYTE)
+	$(LIB_GTK) $(LIB_GTK:.cmx=.o) $(LIB_GTK:.cmx=.cmi) $(LIB_GTK:.cmx=.mli) $(LIB_GTK_BYTE) \
+	$(CMXFILES)
 
 uninstall: dummy
 	$(OCAMLFIND) remove $(PACKAGE)
